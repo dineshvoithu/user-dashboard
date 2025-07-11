@@ -54,6 +54,7 @@
 // export default Users;
 
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -100,11 +101,17 @@ const Users = () => {
       ) : (
         <div style={styles.grid}>
           {filteredUsers.map((user) => (
-            <div key={user.id} style={styles.card}>
-              <h3 style={styles.name}>{user.name}</h3>
-              <p style={styles.email}>{user.email}</p>
-              <p style={styles.username}>@{user.username}</p>
-            </div>
+            <Link
+              key={user.id}
+              to={`/dashboard/users/${user.id}`}
+              style={styles.link}
+            >
+              <div style={styles.card}>
+                <h3 style={styles.name}>{user.name}</h3>
+                <p style={styles.email}>{user.email}</p>
+                <p style={styles.username}>@{user.username}</p>
+              </div>
+            </Link>
           ))}
         </div>
       )}
@@ -160,6 +167,10 @@ const styles = {
   username: {
     fontSize: "13px",
     color: "#999",
+  },
+  link: {
+    textDecoration: "none",
+    color: "inherit",
   },
 };
 

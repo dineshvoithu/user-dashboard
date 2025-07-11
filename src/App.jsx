@@ -1,11 +1,14 @@
 import React from "react";
 import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Users from "./Pages/Users";
 import Profile from "./Pages/Profile";
 import UserContext from "./context/UserContext";
-import Layout from "./Components/Layout";
+import Login from "./Pages/Login";
+import DashboardLayout from "./Components/DashboardLayout";
+import UserDetails from "./Pages/UserDetails";
+import ProtectedRoute from "./Components/ProtectedRoute";
 
 const App = () => {
   const user = {
@@ -15,36 +18,23 @@ const App = () => {
 
   return (
     <UserContext.Provider value={user}>
-      <div>
-        <h1>User Dashboard</h1>
-
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Layout>
-                <Home />
-              </Layout>
-            }
-          />
-          <Route
-            path="/users"
-            element={
-              <Layout>
-                <Users />
-              </Layout>
-            }
-          />
-          <Route
-            path="/profile"
-            element={
-              <Layout>
-                <Profile />
-              </Layout>
-            }
-          />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <DashboardLayout />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/" element={<DashboardLayout />}>
+          <Route index element={<Home />} />
+          <Route path="dashboard/users" element={<Users />} />
+          <Route path="dashboard/users/:id" element={<UserDetails />} />
+          <Route path="dashboard/profile" element={<Profile />} />
+        </Route>
+      </Routes>
     </UserContext.Provider>
   );
 };

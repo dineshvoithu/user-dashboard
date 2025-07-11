@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
-const Layout = ({ children }) => {
+const DashboardLayout = ({ children }) => {
   return (
     <div>
       {/* Top Navbar */}
@@ -11,17 +11,20 @@ const Layout = ({ children }) => {
           <Link to="/" style={styles.link}>
             Home
           </Link>
-          <Link to="/users" style={styles.link}>
+          <Link to="/dashboard/users" style={styles.link}>
             Users
           </Link>
-          <Link to="/profile" style={styles.link}>
+          <Link to="/dashboard/profile" style={styles.link}>
             Profile
           </Link>
         </div>
       </nav>
 
       {/*  Main Content */}
-      <main style={styles.main}>{children}</main>
+      <main style={styles.main}>
+        {children}
+        <Outlet />
+      </main>
     </div>
   );
 };
@@ -52,4 +55,4 @@ const styles = {
   },
 };
 
-export default Layout;
+export default DashboardLayout;
