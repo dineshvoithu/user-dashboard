@@ -6,7 +6,7 @@ A responsive user dashboard built with **React** featuring routing, API integrat
 
 ## 🌍 Live Demo
 
-🔗 [https://voithu-userdashboard.netlify.app/dashboard/users](https://voithu-userdashboard.netlify.app/dashboard/users)
+🔗 [https://voithu-userdashboard.netlify.app](https://voithu-userdashboard.netlify.app)
 
 ---
 
