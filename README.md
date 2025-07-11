@@ -1,12 +1,73 @@
-# React + Vite
+# 🧑‍💼 User Dashboard – React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive user dashboard built with **React** featuring routing, API integration, context, state management, and search functionality.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ✅ React Router (Multi-page navigation)
+- ✅ `useState`, `useEffect`, `useContext`
+- ✅ Fetch users from API (JSONPlaceholder)
+- ✅ Live search filter
+- ✅ Profile page using React Context
+- ✅ Clean dashboard layout with reusable components
+- ✅ Responsive and beginner-friendly UI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🖥️ Tech Stack
+
+- React (Vite)
+- React Router DOM
+- HTML + CSS (Inline + Minimal styling)
+- JavaScript (ES6+)
+- JSONPlaceholder API
+
+
+## 📁 Folder Structure
+
+```
+src/
+├── components/
+│   └── Layout.jsx
+├── context/
+│   └── UserContext.jsx
+├── pages/
+│   ├── Home.jsx
+│   ├── Profile.jsx
+│   └── Users.jsx
+├── App.jsx
+├── main.jsx
+```
+
+---
+
+## 🔧 Installation
+
+```bash
+git clone https://github.com/dineshvoithu/user-dashboard.git
+cd user-dashboard
+npm install
+npm run dev
+```
+
+---
+
+## 🌐 API Used
+
+[JSONPlaceholder](https://jsonplaceholder.typicode.com/users) – Fake REST API for testing.
+
+---
+
+## 🙋‍♂️ Author
+
+- **Name:** Dinesh Voithu
+- **Role:** Frontend Developer
+- **Portfolio:** Coming soon...
+
+---
+
+## 📃 License
+
+This project is open source and free to use.
