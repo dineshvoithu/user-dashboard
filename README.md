@@ -13,6 +13,8 @@ A responsive user dashboard built with **React** featuring routing, API integrat
 - ✅ Profile page using React Context
 - ✅ Clean dashboard layout with reusable components
 - ✅ Responsive and beginner-friendly UI
+- ✅ Protected Routes (Login-style access)
+- ✅ Fake Login + Logout system using Context
 
 ---
 
@@ -24,19 +26,22 @@ A responsive user dashboard built with **React** featuring routing, API integrat
 - JavaScript (ES6+)
 - JSONPlaceholder API
 
-
 ## 📁 Folder Structure
 
 ```
 src/
 ├── components/
-│   └── Layout.jsx
+│   ├── Layout.jsx
+│   └── ProtectedRoute.jsx
 ├── context/
-│   └── UserContext.jsx
+│   ├── UserContext.jsx
+│   └── AuthContext.jsx
 ├── pages/
 │   ├── Home.jsx
 │   ├── Profile.jsx
-│   └── Users.jsx
+│   ├── Users.jsx
+│   ├── UserDetails.jsx
+│   └── Login.jsx
 ├── App.jsx
 ├── main.jsx
 ```
