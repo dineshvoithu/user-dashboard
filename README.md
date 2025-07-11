@@ -24,13 +24,6 @@ A responsive user dashboard built with **React** featuring routing, API integrat
 - JavaScript (ES6+)
 - JSONPlaceholder API
 
----
-
-## 📸 Screenshots
-
-> *(Add screenshots here after deploying – optional but impressive)*
-
----
 
 ## 📁 Folder Structure
 
